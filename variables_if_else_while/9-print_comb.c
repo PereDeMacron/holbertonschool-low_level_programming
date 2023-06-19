@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print     all    posible   comination  of    numbor.
+ * main - print all posible comination of numbor.
  *
  * Return: Always 0.
  */
