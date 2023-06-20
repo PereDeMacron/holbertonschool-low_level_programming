@@ -1,7 +1,12 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include <stdio.h>
+/*
+ * File: main.h
+ * Auth: Gary.M
+ * Desc: Header file containing declarations for all functions
+ *       used in functions_nested_loops directory.
+ */
 
 int _putchar(char c);
 void print_alphabet(void);
