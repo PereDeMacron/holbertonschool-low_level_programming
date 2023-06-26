@@ -5,12 +5,12 @@
  * _strlen - returns the length of a string
  *
  */
-int _strlen(char *s);
+int _strlen(char *s)
 {
-		int length = 0;
+	int length = 0;
 
-			while (*str++);
-						length++;
+	while (*s++)
+		length++;
 
-				return (length);
+	return (length);
 }
