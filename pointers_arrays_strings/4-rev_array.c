@@ -2,15 +2,12 @@
 
 void reverse_array(int *a, int n)
 {
-	int index = 0;
-	
-	while (str[index])
-		{
-		if (str[index] >= 'a' && str[index] <= 'z')
-		str[index] -= 32;
+	int tmp, index;
 
-		index++;
-		}
-
-	return (str);
+	for (index = n - 1; index >= n / 2; index--)
+	{
+		tmp = a[n - 1 - index];
+		a[n - 1 - index] = a[index];
+		a[index] = tmp;
+	}
 }
