@@ -11,6 +11,10 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * Project 1
+ */
+
 int _putchar(char c);
 void reset_to_98(int *n);
 void swap_int(int *a, int *b);
@@ -37,7 +41,18 @@ char *string_toupper(char *);
 char *cap_string(char *);
 char *leet(char *);
 
+/**
+ * Project 3
+ */
 
+void *_memset(void *s, int c, size_t n);
+void *_memcpy(void *dest, const void *src, size_t n);
 
+char *_strchr(char *s, char c);
+unsigned int _strspn(char *s, char *accept);
+char *_strpbrk(char *s, char *accept);
+char *_strstr(char *haystack, char *needle);
+void print_chessboard(char (*a)[8]);
+void print_diagsums(int *a, int size);
 
 #endif
