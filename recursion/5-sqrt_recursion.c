@@ -22,7 +22,7 @@ int find_sqrt(int num, int root)
  * _sqrt_recursion - Calculates the square root of a number recursively.
  * @n: The number to calculate the square root of.
  *
- * Return: The square root of the number if found, -1 if the number is negative.
+ * Return: The square root of the number if found, -1 if the number is -.
  */
 int _sqrt_recursion(int n)
 {

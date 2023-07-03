@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * is_divisible - Helper function to check if a number is divisible by a divisor.
+ * is_divisible - Helper function to check if number is divisible by a divisor.
  * @num: The number to check.
  * @div: The divisor to check.
  *
