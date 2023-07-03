@@ -1,20 +1,23 @@
 #include "main.h"
 
 /**
- *  * _strlen_recursion - Calculates the length of a string recursively.
- *   * @s: Pointer to the string.
- *    *
- *     * Return: The length of the string.
- *      */
-int _strlen_recursion(char *s)
+ * _pow_recursion - Calculates the power of a number recursively.
+ * @x: The base number.
+ * @y: The exponent.
+ *
+ * Return: The result of x raised to the power of y.
+ */
+int _pow_recursion(int x, int y)
 {
-	int len = 0;
+	int result = x;
 
-	if (*s)
-	{
-		len++;
-		len += _strlen_recursion(s + 1);
-	}
+	if (y < 0)
+	return (-1);
 
-	return (len);
+	else if (y == 0)
+	return (1);
+
+	result *= _pow_recursion(x, y - 1);
+
+	return (result);
 }
