@@ -1,16 +1,20 @@
 #include "main.h"
 
-int _pow_recursion(int x, int y)
+/**
+ *  * _strlen_recursion - Calculates the length of a string recursively.
+ *   * @s: Pointer to the string.
+ *    *
+ *     * Return: The length of the string.
+ *      */
+int _strlen_recursion(char *s)
 {
-	int result = x;
+	int len = 0;
 
-	if (y < 0)
-		return (-1);
+	if (*s)
+	{
+		len++;
+		len += _strlen_recursion(s + 1);
+	}
 
-	else if (y == 0)
-		return (1);
-
-	result *= _pow_recursion(x, y - 1);
-
-	return (result);
+	return (len);
 }

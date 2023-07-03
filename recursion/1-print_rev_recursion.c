@@ -1,10 +1,20 @@
 #include "main.h"
 
-void _print_rev_recursion(char *s)
+/**
+ * _strlen_recursion - Calculates the length of a string recursively.
+ * @s: Pointer to the string.
+ *
+ * Return: The length of the string.
+ */
+int _strlen_recursion(char *s)
 {
+	int len = 0;
+
 	if (*s)
 	{
-		_print_rev_recursion(s + 1);
-		_putchar (*s);
+		len++;
+		len += _strlen_recursion(s + 1);
 	}
+
+	return (len);
 }
