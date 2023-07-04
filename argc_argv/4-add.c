@@ -19,7 +19,7 @@ int main(int argc, char *argv[])
 			if (argv[num][digit] < '0' || argv[num][digit] > '9')
 			{
 				printf("Error\n");
-				return 1;
+				return (1);
 			}
 		}
 
@@ -28,5 +28,5 @@ int main(int argc, char *argv[])
 
 	printf("%d\n", sum);
 
-	return 0;
+	return (0);
 }
