@@ -2,10 +2,10 @@
 #define LIBMY_A
 
 /**
- *  * FileName: libmy.a
- *   * Author: Gary.m
- *    * Desc: List all functions that the static library uses
- *     */
+ * FileName: libmy.a
+ * Author: Gary.m
+ * Desc: List all functions that the static library uses
+ */
 
 int _putchar(char c);
 int _islower(int c);
