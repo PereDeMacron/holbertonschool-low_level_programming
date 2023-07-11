@@ -5,8 +5,10 @@
  * @width: The width of the 2D array.
  * @height: The height of the 2D array.
  *
- * Return: On success, returns a pointer to the newly allocated 2D array.
- *         On failure or if width or height is less than or equal to 0, returns NULL.
+ * Return: On success, returns a pointer to
+ *		the newly allocated 2D array.
+ *         On failure or if width or height is less
+ *		than or equal to 0, returns NULL.
  */
 int **alloc_grid(int width, int height)
 {
