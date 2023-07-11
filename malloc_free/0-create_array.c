@@ -1,5 +1,16 @@
 #include "main.h"
 
+/**
+ * *create_array - create an array
+ * 
+ * @size: tell a size
+ * @c: char c
+ *
+ * Return: Array char
+ */
+
+
+
 char *create_array(unsigned int size, char c)
 {         
 	char *array;
