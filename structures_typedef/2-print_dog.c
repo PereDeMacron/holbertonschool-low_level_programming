@@ -1,5 +1,11 @@
 #include "dog.h"
 
+/**
+ * print_dog - print struct dog
+ *
+ * @d: specifier
+ */
+
 void print_dog(struct dog *d)
 {
 	if (d == NULL)

@@ -1,5 +1,14 @@
 #include "dog.h"
 
+/**
+ * new_dog - create a new dog
+ *
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ *
+ * Return: Pointer to the new dog if successful, NULL otherwise
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *new_dog_ptr;
