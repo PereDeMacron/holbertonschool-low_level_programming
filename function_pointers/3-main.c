@@ -1,5 +1,14 @@
 #include "3-calc.h"
 
+/**
+ * main - entry point
+ *
+ * @argc: ..
+ * @argv: ..
+ *
+ * Return: Always 0 (Success)
+ *
+ */
 
 int main(int argc, char *argv[])
 {
