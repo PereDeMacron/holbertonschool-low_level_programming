@@ -1,43 +1,91 @@
 #include "variadic_functions.h"
+#include <stdio.h>
+#include <stdarg.h>
 
-void print_all(const char * const format, ...)
+/**
+ * print_char - Print a char.
+ * @args: va_list args.
+ */
+void print_char(va_list args)
 {
+	char c = va_arg(args, int);
 
-
-
-
-
-
-
-
-
-
-
-
-
+	printf("%c", c);
 }
 
-	
-void print_char(va_list arg) //(letter)//
+/**
+ * print_integer - Print a integer.
+ * @args: va_list arg.
+ */
+void print_integer(va_list args)
 {
-	char letter = va_arg(arg, int);
-	printf("%c", letter);
-}
+	int num = va_arg(args, int);
 
-void print_int(va_list arg) //(num)//
-{
-	int num = va_arg(arg, int);
 	printf("%d", num);
 }
 
-void print_float(va_list arg) //(num)(double)//
+/**
+ * print_float - Print a float.
+ * @args: va_list arg.
+ */
+void print_float(va_list args)
 {
-	double num = va_arg(arg, double);
+	double num = va_arg(args, double);
+
 	printf("%f", num);
 }
 
-void print_string(va_list arg) //(*str) (* char)//
+/**
+ * print_string - Print a string.
+ * @args: va_list arg.
+ */
+void print_string(va_list args)
 {
-	char *str = va_arg(arg, char *);
-	printf("%s", (str != NULL) ? str : "(nil)");
+	char *str = va_arg(args, char*);
+
+	if (str == NULL)
+	str = "(nil)";
+	printf("%s", str);
 }
+
+/**
+ * print_all - Print anything.
+ * @format: ...
+ */
+void print_all(const char * const format, ...)
+{
+	va_list args;
+	unsigned int i = 0, j = 0;
+	char *separator = "";
+
+	void (*print_func[])(va_list) = {
+		print_char,
+		print_integer,
+		print_float,
+		print_string
+	};
+
+	char *format_symbols = "cifs";
+
+	va_start(args, format);
+
+	while (format != NULL && format[i] != '\0')
+	{
+		j = 0;
+		while (format_symbols[j] != '\0')
+		{
+			if (format[i] == format_symbols[j])
+			{
+				printf("%s", separator);
+				print_func[j](args);
+				separator = ", ";
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
+	va_end(args);
+	printf("\n");
+}
+
