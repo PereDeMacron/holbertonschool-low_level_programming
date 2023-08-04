@@ -1,5 +1,14 @@
 #include "lists.h"
 
+/*
+ *add_node - ...
+ *
+ * @head : ...
+ * @str : ...
+ *
+ * return : count
+ */
+
 list_t *add_node(list_t **head, const char *str)
 {
     char *dup;
