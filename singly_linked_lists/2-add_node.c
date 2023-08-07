@@ -1,14 +1,13 @@
 #include "lists.h"
 
-/*
- *add_node - ...
+/**
+ * add_node - Adds a new node at the beginning of a linked list.
  *
- * @head : ...
- * @str : ...
+ * @head: A double pointer to the head of the linked list.
+ * @str: The string to be stored in the new node.
  *
- * return : count
+ * Return: A pointer to the newly created node, or NULL on failure.
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
     char *dup;
