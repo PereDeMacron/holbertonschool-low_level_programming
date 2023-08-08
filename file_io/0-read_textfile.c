@@ -1,8 +1,16 @@
 #include "main.h"
 
-ssize_t read_textfile(const char *filename, size_t letters)
+
+/**
+ * read_textfile - open and read file
+ * 
+ * @filename : the filename
+ * @letters : number of letters
+ */
+
+int read_textfile(const char *filename, size_t letters)
 {
-	ssize_t fd, r, w;
+	int fd, r, w;
 	char *buf;
 
 	buf = malloc(sizeof(char) * letters);
